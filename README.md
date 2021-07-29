@@ -60,16 +60,13 @@ Wireframes drawn with [Pages](https://www.apple.com/pages/).
 
 
 
-
-
-
 <!-- USAGE EXAMPLES -->
 # **Screenshots**
 ### Main Menu
-![Main Menu](https://i.imgur.com/TVFdDjn.png)
+![Main Menu](https://media0.giphy.com/media/b4mwlO7wz4IUUSoLat/giphy.gif?cid=790b76115c14fd0303249d0f58c750bf59c667fbfbb11f33&rid=giphy.gif&ct=g)
 
-### Show/Edit Page
-![Create Schedule](https://i.imgur.com/0TutfUL.png)
+### Create New Schedule
+![Create Schedule](https://media0.giphy.com/media/iiXXyC9TquZBeM6NFJ/giphy.gif?cid=790b76115814ef3db1d137c7201112b8ca3be8a1232ca5f9&rid=giphy.gif&ct=g)
 
 
 
