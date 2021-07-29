@@ -1,0 +1,258 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Enter Your Availability Below</h1>
+<div class="form-group">
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        Name
+        <input class="form-control" type="text" name="name" placeholder="Name">
+
+        <!-- Sunday -->
+        <br>
+        Sunday
+        <select class="form-control" name="SundayStart">
+            <option type="number" name="SundayStart" value="12">Start Time 12:00 PM</option>
+            <option type="number" name="SundayStart" value="13">1:00 PM</option>
+            <option type="number" name="SundayStart" value="14">2:00 PM</option>
+            <option type="number" name="SundayStart" value="15">3:00 PM</option>
+            <option type="number" name="SundayStart" value="16">4:00 PM</option>
+            <option type="number" name="SundayStart" value="17">5:00 PM</option>
+            <option type="number" name="SundayStart" value="18">6:00 PM</option>
+            <option type="number" name="SundayStart" value="19">7:00 PM</option>
+            <option type="number" name="SundayStart" value="20">8:00 PM</option>
+            <option type="number" name="SundayStart" value="21">9:00 PM</option>
+            <option type="number" name="SundayStart" value="22">10:00 PM</option>
+            <option type="number" name="SundayStart" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <select class="form-control" name="SundayEnd">
+            <option type="number" name="SundayEnd" value="13">End Time 1:00 PM</option>
+            <option type="number" name="SundayEnd" value="14">2:00 PM</option>
+            <option type="number" name="SundayEnd" value="15">3:00 PM</option>
+            <option type="number" name="SundayEnd" value="16">4:00 PM</option>
+            <option type="number" name="SundayEnd" value="17">5:00 PM</option>
+            <option type="number" name="SundayEnd" value="18">6:00 PM</option>
+            <option type="number" name="SundayEnd" value="19">7:00 PM</option>
+            <option type="number" name="SundayEnd" value="20">8:00 PM</option>
+            <option type="number" name="SundayEnd" value="21">9:00 PM</option>
+            <option type="number" name="SundayEnd" value="22">10:00 PM</option>
+            <option type="number" name="SundayEnd" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <!-- Monday -->
+        <br>
+        Monday
+        <select class="form-control" name="MondayStart">
+            <option type="number" name="MondayStart" value="12">Start Time 12:00 PM</option>
+            <option type="number" name="MondayStart" value="13">1:00 PM</option>
+            <option type="number" name="MondayStart" value="14">2:00 PM</option>
+            <option type="number" name="MondayStart" value="15">3:00 PM</option>
+            <option type="number" name="MondayStart" value="16">4:00 PM</option>
+            <option type="number" name="MondayStart" value="17">5:00 PM</option>
+            <option type="number" name="MondayStart" value="18">6:00 PM</option>
+            <option type="number" name="MondayStart" value="19">7:00 PM</option>
+            <option type="number" name="MondayStart" value="20">8:00 PM</option>
+            <option type="number" name="MondayStart" value="21">9:00 PM</option>
+            <option type="number" name="MondayStart" value="22">10:00 PM</option>
+            <option type="number" name="MondayStart" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <select class="form-control" name="MondayEnd">
+            <option type="number" name="MondayEnd" value="13">End Time 1:00 PM</option>
+            <option type="number" name="MondayEnd" value="14">2:00 PM</option>
+            <option type="number" name="MondayEnd" value="15">3:00 PM</option>
+            <option type="number" name="MondayEnd" value="16">4:00 PM</option>
+            <option type="number" name="MondayEnd" value="17">5:00 PM</option>
+            <option type="number" name="MondayEnd" value="18">6:00 PM</option>
+            <option type="number" name="MondayEnd" value="19">7:00 PM</option>
+            <option type="number" name="MondayEnd" value="20">8:00 PM</option>
+            <option type="number" name="MondayEnd" value="21">9:00 PM</option>
+            <option type="number" name="MondayEnd" value="22">10:00 PM</option>
+            <option type="number" name="MondayEnd" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <!-- Tuesday -->
+        <br>
+        Tuesday
+        <select class="form-control" name="TuesdayStart">
+            <option type="number" name="TuesdayStart" value="12">Start Time 12:00 PM</option>
+            <option type="number" name="TuesdayStart" value="13">1:00 PM</option>
+            <option type="number" name="TuesdayStart" value="14">2:00 PM</option>
+            <option type="number" name="TuesdayStart" value="15">3:00 PM</option>
+            <option type="number" name="TuesdayStart" value="16">4:00 PM</option>
+            <option type="number" name="TuesdayStart" value="17">5:00 PM</option>
+            <option type="number" name="TuesdayStart" value="18">6:00 PM</option>
+            <option type="number" name="TuesdayStart" value="19">7:00 PM</option>
+            <option type="number" name="TuesdayStart" value="20">8:00 PM</option>
+            <option type="number" name="TuesdayStart" value="21">9:00 PM</option>
+            <option type="number" name="TuesdayStart" value="22">10:00 PM</option>
+            <option type="number" name="TuesdayStart" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <select class="form-control" name="TuesdayEnd">
+            <option type="number" name="TuesdayEnd" value="13">End Time 1:00 PM</option>
+            <option type="number" name="TuesdayEnd" value="14">2:00 PM</option>
+            <option type="number" name="TuesdayEnd" value="15">3:00 PM</option>
+            <option type="number" name="TuesdayEnd" value="16">4:00 PM</option>
+            <option type="number" name="TuesdayEnd" value="17">5:00 PM</option>
+            <option type="number" name="TuesdayEnd" value="18">6:00 PM</option>
+            <option type="number" name="TuesdayEnd" value="19">7:00 PM</option>
+            <option type="number" name="TuesdayEnd" value="20">8:00 PM</option>
+            <option type="number" name="TuesdayEnd" value="21">9:00 PM</option>
+            <option type="number" name="TuesdayEnd" value="22">10:00 PM</option>
+            <option type="number" name="TuesdayEnd" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <!-- Wednesday -->
+        <br>
+        Wednesday
+        <select class="form-control" name="WednesdayStart">
+            <option type="number" name="WednesdayStart" value="12">Start Time 12:00 PM</option>
+            <option type="number" name="WednesdayStart" value="13">1:00 PM</option>
+            <option type="number" name="WednesdayStart" value="14">2:00 PM</option>
+            <option type="number" name="WednesdayStart" value="15">3:00 PM</option>
+            <option type="number" name="WednesdayStart" value="16">4:00 PM</option>
+            <option type="number" name="WednesdayStart" value="17">5:00 PM</option>
+            <option type="number" name="WednesdayStart" value="18">6:00 PM</option>
+            <option type="number" name="WednesdayStart" value="19">7:00 PM</option>
+            <option type="number" name="WednesdayStart" value="20">8:00 PM</option>
+            <option type="number" name="WednesdayStart" value="21">9:00 PM</option>
+            <option type="number" name="WednesdayStart" value="22">10:00 PM</option>
+            <option type="number" name="WednesdayStart" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <select class="form-control" name="WednesdayEnd">
+            <option type="number" name="WednesdayEnd" value="13">End Time 1:00 PM</option>
+            <option type="number" name="WednesdayEnd" value="14">2:00 PM</option>
+            <option type="number" name="WednesdayEnd" value="15">3:00 PM</option>
+            <option type="number" name="WednesdayEnd" value="16">4:00 PM</option>
+            <option type="number" name="WednesdayEnd" value="17">5:00 PM</option>
+            <option type="number" name="WednesdayEnd" value="18">6:00 PM</option>
+            <option type="number" name="WednesdayEnd" value="19">7:00 PM</option>
+            <option type="number" name="WednesdayEnd" value="20">8:00 PM</option>
+            <option type="number" name="WednesdayEnd" value="21">9:00 PM</option>
+            <option type="number" name="WednesdayEnd" value="22">10:00 PM</option>
+            <option type="number" name="WednesdayEnd" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <!-- Thursday -->
+        <br>
+        Thursday
+        <select class="form-control" name="ThursdayStart">
+            <option type="number" name="ThursdayStart" value="12">Start Time 12:00 PM</option>
+            <option type="number" name="ThursdayStart" value="13">1:00 PM</option>
+            <option type="number" name="ThursdayStart" value="14">2:00 PM</option>
+            <option type="number" name="ThursdayStart" value="15">3:00 PM</option>
+            <option type="number" name="ThursdayStart" value="16">4:00 PM</option>
+            <option type="number" name="ThursdayStart" value="17">5:00 PM</option>
+            <option type="number" name="ThursdayStart" value="18">6:00 PM</option>
+            <option type="number" name="ThursdayStart" value="19">7:00 PM</option>
+            <option type="number" name="ThursdayStart" value="20">8:00 PM</option>
+            <option type="number" name="ThursdayStart" value="21">9:00 PM</option>
+            <option type="number" name="ThursdayStart" value="22">10:00 PM</option>
+            <option type="number" name="ThursdayStart" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <select class="form-control" name="ThursdayEnd">
+            <option type="number" name="ThursdayEnd" value="13">End Time 1:00 PM</option>
+            <option type="number" name="ThursdayEnd" value="14">2:00 PM</option>
+            <option type="number" name="ThursdayEnd" value="15">3:00 PM</option>
+            <option type="number" name="ThursdayEnd" value="16">4:00 PM</option>
+            <option type="number" name="ThursdayEnd" value="17">5:00 PM</option>
+            <option type="number" name="ThursdayEnd" value="18">6:00 PM</option>
+            <option type="number" name="ThursdayEnd" value="19">7:00 PM</option>
+            <option type="number" name="ThursdayEnd" value="20">8:00 PM</option>
+            <option type="number" name="ThursdayEnd" value="21">9:00 PM</option>
+            <option type="number" name="ThursdayEnd" value="22">10:00 PM</option>
+            <option type="number" name="ThursdayEnd" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <!-- Friday -->
+        <br>
+        Friday
+        <select class="form-control" name="FridayStart">
+            <option type="number" name="FridayStart" value="12">Start Time 12:00 PM</option>
+            <option type="number" name="FridayStart" value="13">1:00 PM</option>
+            <option type="number" name="FridayStart" value="14">2:00 PM</option>
+            <option type="number" name="FridayStart" value="15">3:00 PM</option>
+            <option type="number" name="FridayStart" value="16">4:00 PM</option>
+            <option type="number" name="FridayStart" value="17">5:00 PM</option>
+            <option type="number" name="FridayStart" value="18">6:00 PM</option>
+            <option type="number" name="FridayStart" value="19">7:00 PM</option>
+            <option type="number" name="FridayStart" value="20">8:00 PM</option>
+            <option type="number" name="FridayStart" value="21">9:00 PM</option>
+            <option type="number" name="FridayStart" value="22">10:00 PM</option>
+            <option type="number" name="FridayStart" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <select class="form-control" name="FridayEnd">
+            <option type="number" name="FridayEnd" value="13">End Time 1:00 PM</option>
+            <option type="number" name="FridayEnd" value="14">2:00 PM</option>
+            <option type="number" name="FridayEnd" value="15">3:00 PM</option>
+            <option type="number" name="FridayEnd" value="16">4:00 PM</option>
+            <option type="number" name="FridayEnd" value="17">5:00 PM</option>
+            <option type="number" name="FridayEnd" value="18">6:00 PM</option>
+            <option type="number" name="FridayEnd" value="19">7:00 PM</option>
+            <option type="number" name="FridayEnd" value="20">8:00 PM</option>
+            <option type="number" name="FridayEnd" value="21">9:00 PM</option>
+            <option type="number" name="FridayEnd" value="22">10:00 PM</option>
+            <option type="number" name="FridayEnd" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <!-- Saturday -->
+        <br>
+        Saturday
+        <select class="form-control" name="SaturdayStart">
+            <option type="number" name="SaturdayStart" value="12">Start Time 12:00 PM</option>
+            <option type="number" name="SaturdayStart" value="13">1:00 PM</option>
+            <option type="number" name="SaturdayStart" value="14">2:00 PM</option>
+            <option type="number" name="SaturdayStart" value="15">3:00 PM</option>
+            <option type="number" name="SaturdayStart" value="16">4:00 PM</option>
+            <option type="number" name="SaturdayStart" value="17">5:00 PM</option>
+            <option type="number" name="SaturdayStart" value="18">6:00 PM</option>
+            <option type="number" name="SaturdayStart" value="19">7:00 PM</option>
+            <option type="number" name="SaturdayStart" value="20">8:00 PM</option>
+            <option type="number" name="SaturdayStart" value="21">9:00 PM</option>
+            <option type="number" name="SaturdayStart" value="22">10:00 PM</option>
+            <option type="number" name="SaturdayStart" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+        <select class="form-control" name="SaturdayEnd">
+            <option type="number" name="SaturdayEnd" value="13">End Time 1:00 PM</option>
+            <option type="number" name="SaturdayEnd" value="14">2:00 PM</option>
+            <option type="number" name="SaturdayEnd" value="15">3:00 PM</option>
+            <option type="number" name="SaturdayEnd" value="16">4:00 PM</option>
+            <option type="number" name="SaturdayEnd" value="17">5:00 PM</option>
+            <option type="number" name="SaturdayEnd" value="18">6:00 PM</option>
+            <option type="number" name="SaturdayEnd" value="19">7:00 PM</option>
+            <option type="number" name="SaturdayEnd" value="20">8:00 PM</option>
+            <option type="number" name="SaturdayEnd" value="21">9:00 PM</option>
+            <option type="number" name="SaturdayEnd" value="22">10:00 PM</option>
+            <option type="number" name="SaturdayEnd" value="23">11:00 PM</option>
+            <option type="number" name="SundayStart" value="0">Unavailable</option>
+        </select>
+
+
+        <input type="number" name="TotalTime" hidden>
+        <br>
+        <button class="btn btn-primary" id="total" type="submit">Submit</button>
+    </form>
+</div>
+
+
+{% endblock %}
