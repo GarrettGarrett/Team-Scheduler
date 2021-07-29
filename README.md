@@ -3,7 +3,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/GarrettGarrett/Team-Scheduler">
-    <img src="https://image.flaticon.com/icons/png/512/3269/3269691.png" alt="Logo" width="100" height="100">
+    <img src="https://image.flaticon.com/icons/png/512/3269/3269691.png" alt="Logo" width="120" height="120">
   </a>
 
   <h3 align="center">Team Scheduler</h3>
@@ -72,7 +72,7 @@ Wireframes drawn with [Pages](https://www.apple.com/pages/).
 
 # **Future Enhancements**
 * Support Time Blocks Larger Than 1 Hour
-* Support A.M. Times
+* Support A.M. 
 
 
 
