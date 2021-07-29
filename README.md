@@ -38,7 +38,7 @@ A Django web application that helps teams with different schedules find times to
 
 # **Built With**
 <div align="center">
-    <img src="https://i.imgur.com/f7Vr3zB.png"
+    <img src="https://i.imgur.com/NgRwAsu.png"
       alt="Built With"
       width="100%" />
 </div>
