@@ -3,7 +3,6 @@ from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Schedule
 
-# schedules = Schedule.objects.all()
 
 def home(request):
     def get_availability(): # Calculating available times:
@@ -18,59 +17,57 @@ def home(request):
         saturdayArray = []
         for schedule in schedules:
             # Sunday
-            sunday_list = list(range(schedule.SundayStart, schedule.SundayEnd))
+            sunday_list = list(range(schedule.SundayStart, schedule.SundayEnd)) # Create array from user's start time - end time
             for i in sunday_list:
-                sundayArray.append(int(i) + .5)
+                sundayArray.append(int(i) + .5) # Temporarily add .5 to distinguish availability and prevent overlapping
 
             # Monday
-            monday_list = list(range(schedule.MondayStart, schedule.MondayEnd))
+            monday_list = list(range(schedule.MondayStart, schedule.MondayEnd)) # Create array from user's start time - end time
             for i in monday_list:           
                 mondayArray.append(int(i) + .5)
 
             # Tuesday
-            tuesday_list = list(range(schedule.TuesdayStart, schedule.TuesdayEnd))
+            tuesday_list = list(range(schedule.TuesdayStart, schedule.TuesdayEnd))  # Create array from user's start time - end time
             for i in tuesday_list:           
                 tuesdayArray.append(int(i) + .5)
 
             # Wednesday
-            wednesday_list = list(range(schedule.WednesdayStart, schedule.WednesdayEnd))
+            wednesday_list = list(range(schedule.WednesdayStart, schedule.WednesdayEnd)) # Create array from user's start time - end time
             for i in wednesday_list:           
                 wednesdayArray.append(int(i) + .5)
 
             # Thursday
-            thursday_list = list(range(schedule.ThursdayStart, schedule.ThursdayEnd))
+            thursday_list = list(range(schedule.ThursdayStart, schedule.ThursdayEnd)) # Create array from user's start time - end time
             for i in thursday_list:           
                 thursdayArray.append(int(i) + .5)
 
             # Friday
-            friday_list = list(range(schedule.FridayStart, schedule.FridayEnd))
+            friday_list = list(range(schedule.FridayStart, schedule.FridayEnd)) # Create array from user's start time - end time
             for i in friday_list:           
                 fridayArray.append(int(i) + .5)
 
             # Saturday
-            saturday_list = list(range(schedule.SaturdayStart, schedule.SaturdayEnd))
+            saturday_list = list(range(schedule.SaturdayStart, schedule.SaturdayEnd)) # Create array from user's start time - end time
             for i in saturday_list:           
                 saturdayArray.append(int(i) + .5)
 
 
-        def find_availability(array, total_users):
+        def find_availability(array, total_users): 
             availability_array = []
             availability_window_array = []
             for i in array:
-                if int(total_users) == int(array.count(i)):
+                if int(total_users) == int(array.count(i)): # if 5 users are available at 5, then 5 will appear 5 times = availability
                     availability_array.append(i)
 
-            if len(availability_array) > 0:
-                unique_array  = []
+            if len(availability_array) > 0: 
+                unique_array  = [] 
                 for i in availability_array:
                     if i not in unique_array:
-                        unique_array.append(i)
+                        unique_array.append(i) # remove duplicates
                     
                 for i in unique_array:
                     one_hour_window = []
-                    if i == .5: # Unavailable
-                        # one_hour_window.append(int(0))
-                        # one_hour_window.append(int(0))
+                    if i == .5: # 0 = Unavailable
                         pass
                     if i == 12.5: # 12 PM
                         one_hour_window.append(int(i - .5))
@@ -110,16 +107,16 @@ def home(request):
                         one_hour_window.append(int(12))
                     else:
                         pass   
-                    availability_window_array.append(one_hour_window)
+                    availability_window_array.append(one_hour_window) # [5,6] , [6,7], etc
 
-            final_availability_window_array = [] #handles error time input
+            final_availability_window_array = [] # Handes incorrect input.  Example '10000'
             for i in availability_window_array:
                 if len(i) > 0:
                     final_availability_window_array.append(i)
             return final_availability_window_array
 
         
-        sunday_availability = find_availability(sundayArray, total_users)
+        sunday_availability = find_availability(sundayArray, total_users) # Returns all the 1hour timeslots for Sunday
         monday_availability = find_availability(mondayArray, total_users)
         tuesday_availability = find_availability(tuesdayArray, total_users)
         wednesday_availability = find_availability(wednesdayArray, total_users)
@@ -130,19 +127,19 @@ def home(request):
             
         return sunday_availability, monday_availability, tuesday_availability, wednesday_availability, thursday_availability, friday_availability, saturday_availability
 
-    # Availability by Day
+    # Availability by Day: Displayed in the main table
     schedules = Schedule.objects.all()
     total_users = len(schedules)
     sunday_availability, monday_availability, tuesday_availability, wednesday_availability, thursday_availability, friday_availability, saturday_availability = get_availability()  
     
-    # Total Number of Available Time Slots by Day
+    # Total Number of Available Time Slots by Day: Displayed on the Title of the main table 
     total_openings = len(sunday_availability) + len(monday_availability) + len(tuesday_availability) + len(wednesday_availability) + len(thursday_availability) + len(friday_availability) + len(saturday_availability)
 
-    # Total Hours of Availability by User
+    # Total Hours of Availability by User: Displayed in Badges
     def get_total_hours_available():
         schedules = Schedule.objects.all()
         availability_by_user_array = []
-        for schedule in schedules:
+        for schedule in schedules: # For each user, count all available hours
             total_hours = 0
             # Sunday
             if schedule.SundayEnd >= schedule.SundayStart:
@@ -200,7 +197,7 @@ def home(request):
         return total_hours
         
 
-    for schedule in schedules:
+    for schedule in schedules: # Update the user's total availability after creating/editing
         Schedule.objects.filter(id=schedule.id).update(TotalTime = getTime(schedule))
         
         
