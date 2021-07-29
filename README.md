@@ -56,7 +56,7 @@ A Django web application that helps teams with different schedules find times to
 
 Wireframes drawn with [Pages](https://www.apple.com/pages/).  
 
-![Home Page/ New Page](https://i.imgur.com/U7Pc3uB.png)
+![Home Page/ New Page](https://i.imgur.com/TGUpvNb.png)
 
 
 
@@ -68,7 +68,7 @@ Wireframes drawn with [Pages](https://www.apple.com/pages/).
 ### Create New Schedule
 ![Create Schedule](https://media0.giphy.com/media/iiXXyC9TquZBeM6NFJ/giphy.gif?cid=790b76115814ef3db1d137c7201112b8ca3be8a1232ca5f9&rid=giphy.gif&ct=g)
 
-
+<!--  -->
 
 # **Future Enhancements**
 * Support Time Blocks Larger Than 1 Hour
